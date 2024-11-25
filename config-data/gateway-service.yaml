@@ -25,11 +25,22 @@ spring:
           uri: lb://categorys-service
           predicates:
             - Path=/api/v1/categorys/**
-            #- Path=/api/v1/discounts/**
-            #- Path=/api/v1/employees/**
-            #- Path=/api/v1/extraHours/**
-  
-            #- Path=/api/v1/latearrivals/**
+        - id: categorys-service
+          uri: lb://categorys-service
+          predicates:
+            - Path=/api/v1/discounts/**
+        - id: categorys-service
+          uri: lb://categorys-service
+          predicates:
+            - Path=/api/v1/employees/**
+        - id: categorys-service
+          uri: lb://categorys-service
+          predicates:
+            - Path=/api/v1/extraHours/**
+        - id: categorys-service
+          uri: lb://categorys-service
+          predicates:
+            - Path=/api/v1/latearrivals/**
         - id: categorys-service
           uri: lb://categorys-service
           predicates:
