@@ -37,4 +37,4 @@ spring:
         - id: justifications-service
           uri: lb://justifications-service
           predicates:
-            - Path=/api/v1/justificactions/**
+            - Path=/api/v1/justifications/**
