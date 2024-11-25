@@ -28,8 +28,12 @@ spring:
             #- Path=/api/v1/discounts/**
             #- Path=/api/v1/employees/**
             #- Path=/api/v1/extraHours/**
-            #- Path=/api/v1/paycheck/**
+  
             #- Path=/api/v1/latearrivals/**
+        - id: categorys-service
+          uri: lb://categorys-service
+          predicates:
+            - Path=/api/v1/paycheck/**
         - id: inandoutreg-service
           uri: lb://inandoutreg-service
           predicates:
