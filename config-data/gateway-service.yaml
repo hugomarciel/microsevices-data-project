@@ -62,7 +62,7 @@ spring:
         - id: inandoutreg-service
           uri: lb://inandoutreg-service
           predicates:
-            - Path=/api/v1/inandoutreg/**
+            - Path=/api/v1/inandout/**
         - id: justifications-service
           uri: lb://justifications-service
           predicates:
