@@ -33,18 +33,18 @@ spring:
           uri: lb://categorys-service
           predicates:
             - Path=/api/v1/employees/**
-        #- id: categorys-service
-        #  uri: lb://categorys-service
-        #  predicates:
-        #    - Path=/api/v1/extraHours/**
-        #- id: categorys-service
-        #  uri: lb://categorys-service
-        #  predicates:
-        #    - Path=/api/v1/latearrivals/**
-        #- id: categorys-service
-        #  uri: lb://categorys-service
-        #  predicates:
-        #    - Path=/api/v1/paycheck/**
+        - id: categorys-service
+          uri: lb://categorys-service
+          predicates:
+            - Path=/api/v1/extraHours/**
+        - id: categorys-service
+          uri: lb://categorys-service
+          predicates:
+            - Path=/api/v1/latearrivals/**
+        - id: categorys-service
+          uri: lb://categorys-service
+          predicates:
+            - Path=/api/v1/paycheck/**
         - id: inandoutreg-service
           uri: lb://inandoutreg-service
           predicates:
