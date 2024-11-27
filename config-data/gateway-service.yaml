@@ -9,6 +9,7 @@ eureka:
       default-zone: http://eureka-service:8761/eureka
   instance:
     hostname: gateway-service
+    instance-id: gateway-service
 
 spring:
   cloud:
