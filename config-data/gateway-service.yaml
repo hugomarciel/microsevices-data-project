@@ -78,6 +78,6 @@ spring:
           predicates:
             - Path=/api/v1/inandout/**
         - id: justifications-service
-          uri: justifications-service.default.svc.cluster.local:8010
+          uri: justifications-service:8010
           predicates:
             - Path=/api/v1/justifications/**
