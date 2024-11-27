@@ -7,8 +7,8 @@ eureka:
     service-url:
       defaultZone: http://eureka-service:8761/eureka/ 
   instance:
-    hostname: empleado-service
-    instance-id: empleado-service
+    hostname: justifications-service
+    instance-id: justifications-service
 
 
 #server:
