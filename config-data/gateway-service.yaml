@@ -32,7 +32,7 @@ spring:
             allowCredentials: false 
       routes:
         - id: justifications-service
-          uri: http://justifications-service:8080
+          uri: http://justifications-service:8010
           predicates:
             - Path=/api/v1/justifications/**
         - id: autorizations-service
