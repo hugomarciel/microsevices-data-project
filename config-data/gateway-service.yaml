@@ -10,9 +10,6 @@ eureka:
     hostname: gateway-service
     instance-id: gateway-service
 
-
-
-
 spring:
   cloud:
     gateway:
