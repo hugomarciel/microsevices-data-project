@@ -78,6 +78,6 @@ spring:
           predicates:
             - Path=/api/v1/inandout/**
         - id: justifications-service
-          uri: justifications-service
+          uri: lb://justifications-service
           predicates:
             - Path=/api/v1/justifications/**
