@@ -11,18 +11,7 @@ eureka:
     instance-id: gateway-service
 
 
-#server:
-#  port: 8080
-  
-#eureka:
-#  client:
-#    fetch-registry: true
-#    register-with-eureka: true
-#    service-url:
-#      default-zone: http://eureka-service:8761/eureka
-#  instance:
-#    hostname: gateway-service
-#    instance-id: gateway-service
+
 
 spring:
   cloud:
@@ -45,6 +34,10 @@ spring:
               - "*" 
             allowCredentials: false 
       routes:
+        - id: justifications-service
+          uri: lb://justifications-service
+          predicates:
+            - Path=/api/v1/justifications/**
         - id: autorizations-service
           uri: lb://autorizations-service
           predicates:
@@ -77,7 +70,18 @@ spring:
           uri: lb://inandoutreg-service
           predicates:
             - Path=/api/v1/inandout/**
-        - id: justifications-service
-          uri: lb://justifications-service
-          predicates:
-            - Path=/api/v1/justifications/**
+        
+
+
+#server:
+#  port: 8080
+  
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      default-zone: http://eureka-service:8761/eureka
+#  instance:
+#    hostname: gateway-service
+#    instance-id: gateway-service
